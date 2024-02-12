@@ -1,7 +1,8 @@
 import sys
 
-# f = open('sample.txt')
-for arg in sys.argv[1:]:
+f = open('sample.txt')
+
+for arg in f:
     try:
         f = open(arg, 'r')
     except OSError:

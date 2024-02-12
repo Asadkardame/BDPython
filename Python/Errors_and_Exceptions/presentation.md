@@ -124,6 +124,12 @@ finally:
 - Avoid catching generic exceptions unless necessary.
 - Log exceptions and error messages for debugging and troubleshooting.
 
+import logging
+
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError as e:
+    logging.error("An error occurred: %s", e)
 ---
 
 ## 4. Conclusion
